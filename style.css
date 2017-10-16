@@ -1,0 +1,7 @@
+.row-input {
+  margin-top: 30px;
+}
+
+.tb > tr > td:first-child {
+  text-transform: capitalize;
+}
