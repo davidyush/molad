@@ -53,3 +53,7 @@ export const daysCountInMonths = {
   av: 30,
   elul: 29
 };
+
+//----- ui
+
+export const daysOfWeek = ['Sun','Mon','Tue','Wed','Thu','Fri','Shab'];

@@ -36,3 +36,11 @@ describe('is215589', () => {
     expect(rosh.is215589('2.15.600', 5779)).toEqual(false);
   });
 });
+
+describe('defineRoshAshona', () => {
+  it('should get correct day of the week that rosh ashona falls', () => {
+    expect(rosh.defineRoshAshona(5790)).toEqual(2);
+    expect(rosh.defineRoshAshona(5785)).toEqual(5);
+    expect(rosh.defineRoshAshona(5781)).toEqual(7);
+  });
+});

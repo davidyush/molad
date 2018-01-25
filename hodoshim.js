@@ -35,7 +35,6 @@ export function getDaysOfTheYear(year) {
     daysInMonths.cheshvan = 30;
   }
 
-  // console.log({ daysInMonths, daysInYear});
   return {
     daysInMonths,
     daysInYear
@@ -69,16 +68,14 @@ export function getDayOfMonth(year, month) {
   const isMeubar = isMeubarYear(year);
   const months = isMeubar === false ? monthsOrdinary : monthsMeubar;
   const daysBefore = daysBeforeMonth(month, months, daysInMonths);
-  let day = dayOfRoshAshona + (daysBefore % 7);
+  let day = (dayOfRoshAshona + daysBefore) % 7;
   if(day === 0)
     day = 7;
-  // console.log(day);
   return day;
 }
 
 export function daysBeforeMonth(month, months, daysInMonths) {
   let daysCount = 0;
-  console.log(daysInMonths);
   for(let i = 0; i < months.length; i++) {
     if(month === months[i]) {
       return daysCount;
