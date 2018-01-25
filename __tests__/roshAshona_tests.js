@@ -30,9 +30,9 @@ describe('is39204', () => {
 
 describe('is215589', () => {
   it('should return true if more than 2.15.589 and current year is meuberet', () => {
-    expect(rosh.is215589('2.15.589', 5779)).toEqual(true);
-    expect(rosh.is215589('2.15.589', 5777)).toEqual(false);
+    expect(rosh.is215589('2.15.589', 5779)).toEqual(false);
+    expect(rosh.is215589('2.15.589', 5777)).toEqual(true);
     expect(rosh.is215589('2.15.588', 5779)).toEqual(false);
-    expect(rosh.is215589('2.15.600', 5779)).toEqual(true);
+    expect(rosh.is215589('2.15.600', 5779)).toEqual(false);
   });
 });

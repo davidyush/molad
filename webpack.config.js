@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: './main.js',
   output: {
@@ -10,5 +12,8 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ]
 }

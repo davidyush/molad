@@ -1,10 +1,9 @@
 import { defineMolad, isMeubarYear, prettyPrint } from './molad'
 import { monthsOrdinary, monthsMeubar } from './constans'
 import { defineRoshAshona } from './roshAshona'
-
-const molad = defineMolad(5784, 'tishrei');
-const rosh = defineRoshAshona(molad, 5784);
-console.log(molad,rosh);
+// import { getDayOfMonth } from './hodoshim';
+//
+// getDayOfMonth(5779,'nisan');
 
 function getInfo(year) {
   const isMeubar = isMeubarYear(year);
@@ -32,19 +31,19 @@ const tb = document.getElementById('tbody');
 const table = document.getElementById('main-table');
 const year = document.getElementById('year');
 
-// if(tbody.innerHTML.length === 0) {
-//   table.style.display = 'none';
-// }
+if(+year.value) {
+  let infoMolad = getInfo(+year.value);
 
+  infoMolad.forEach(current => {
+    let tr = createTr(current);
+    tb.appendChild(tr);
+  });
+}
 
 year.addEventListener('change', (event) => {
   event.preventDefault();
   tb.innerHTML = '';
   let infoMolad = getInfo(event.target.value);
-
-  // if(infoMolad !== undefined) {
-  //   table.style.display = 'block';
-  // }
 
   infoMolad.forEach(current => {
     let tr = createTr(current);

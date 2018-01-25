@@ -7,9 +7,9 @@ import {
   monthsOrdinary,
   monthsMeubar,
   restOfMonth
-} from './constans'
+} from './constans';
 
-import { multyTime, plusTime, fromArrToString, fromStringToArr } from './math_helpers'
+import { multyTime, plusTime, fromArrToString, fromStringToArr } from './math_helpers';
 
 export function getMachzorAndYear(year) {
   let machzorOrder = Math.floor(year / 19);
